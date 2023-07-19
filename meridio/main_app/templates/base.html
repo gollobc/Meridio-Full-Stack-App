@@ -1,22 +1,34 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
     <title>Meridio</title>
 </head>
 
 <body>
     <header>
-        <ul>
-            <li><a href='/'>Meridio</a></li>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/about'>About</a></li>
-            <li><a href='/market'>Market</a></li>
-        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                 <ul>
+            <a href="{% url 'home' %}">Meridio</a>
+            <a href="{% url 'home' %}">Home
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'index' %}">Market</a>
+            <a href="{% url 'post_create' %}">Add Listing</a>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>

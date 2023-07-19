@@ -21,17 +21,10 @@
   </div>
 
   <div class="col s6">
-
-      <table class="striped">
-
-      <thead>
-       
-      </thead>
-
-      <tbody>
-       
-      </tbody>
-
-    </table>
+    <form action="{% url 'add_comment' post.id %}" method="POST">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <input type="submit" class="btn" value="Add Bid">
+    </form>
   </div>
 {% endblock %}
